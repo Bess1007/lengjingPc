@@ -90,7 +90,7 @@ i,strong,b{
     z-index: 10;
 }
 .center_box {
-    width: 1027px;
+    width: 1200px;
     margin:0 auto;
 }
 .lj_header img {
@@ -202,6 +202,7 @@ i,strong,b{
 }
 .partner_list {
     width: 1146px;
+    padding-bottom: 65px;
 }
 .partner_cell {
     float: left;
@@ -312,8 +313,8 @@ i,strong,b{
     text-align: center;
 }
 .txtstyle1 {
-    display: inline-block;
-    padding:0 54px;
+    width: 514px;
+    margin-left: -257px;
     background-color: #85e9ff;
     height: 66px;
     line-height: 66px;
@@ -322,11 +323,14 @@ i,strong,b{
     border-radius: 66px;
     color: #000;
     font-size: 29px;
-    margin-top: 324px;
+    /*margin-top: 324px;*/
 }
 .func_introduce {
-    position: relative;
-    margin-top: 60px;
+    position: absolute;
+    top: 450px;
+    width: 100%;
+    left: 50%;
+    margin-left: -630px;
     height: 92px;
     text-align: center;
 }
@@ -334,7 +338,7 @@ i,strong,b{
     display: inline-block;
 }
 .func_introduce li {
-    display: inline-block;
+    width: auto;
 }
 .func_introduce li img {
     display: inline-block;
@@ -358,7 +362,11 @@ i,strong,b{
     line-height: 1;
 }
 .download_tips {
-    margin-top: 120px;
+    position: absolute;
+    bottom: 155px;
+    width: 432px;
+    left: 50%;
+    margin-left: -216px;
 }
 .download_tips .app_ewm {
     display: block;
@@ -516,7 +524,7 @@ div.yqjc_ico span{
     text-align: center;
     top: 50%;
     margin-top: -54px;
-    right: 44px;
+    right: 80px;
 }
 .backto_top img {
     display: inline-block;
@@ -543,7 +551,7 @@ div.yqjc_ico span{
     font-size: 20px;
     line-height: 30px;
 }
-.b1_01,.b1_02,.b1_03,.b2_01,.b2_02,.b2_03,.b2_04,.b3_01,.b3_02,.b4_01,.b4_02,.b5_01,.b5_02 {
+.b1_01,.b1_02,.b1_03,.b1_04,.b1_05,.b2_01,.b2_02,.b2_03,.b2_04,.b3_01,.b3_02,.b4_01,.b4_02,.b5_01,.b5_02 {
     position: absolute;
 }
 .b1_01 {
@@ -567,8 +575,11 @@ div.yqjc_ico span{
 
 /*************动画文字定位*************/
 .b1_01 {top: 224px;}
-.b1_02 {left: 0;top: 0;}
-.b1_03 {right: 0;top: 0;}
+.b1_02 {top: 324px;left:50%;}
+.b1_03 {left: 0;}
+.b1_04 {left: 500px}
+.b1_04 {left: 500px}
+.b1_05 {right: 0}
 .b2_01 {left: 146px;top: 236px;}
 .b2_02 {right: 248px;top: 375px;}
 .b2_03 {right: 40px;top: 485px;}

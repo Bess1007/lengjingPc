@@ -4,8 +4,11 @@ $(function () {
     function fn_load() {
         var elementInit = {
             ".b1_01": {top: -50,opacity:0},
-            ".b1_02": {left: -300, opacity: 0},
-            ".b1_03": {right: -300, opacity: 0},
+            ".b1_02": {top: -50, opacity: 0},
+            ".b1_03": {left: 1200, opacity: 0},
+            ".b1_04": {left: 1600, opacity: 0},
+            ".b1_05": {right: -800, opacity: 0},
+            ".b1_06": {opacity: 0},
             ".b2_01": {left: -110, opacity: 0},
             ".b2_02": {right: -110, opacity: 0},
             ".b2_03": {right: -110, opacity: 0},
@@ -44,7 +47,11 @@ $(function () {
       },100);
 
     }
-
+    var timer1 = null;
+    var timer2 = null;
+    var timer3 = null;
+    var timer4 = null;
+    var timer5 = null;
     window.onscroll = function () {
         function getPageNum() {
             var p_num = 0;
@@ -75,12 +82,19 @@ $(function () {
             boxGoOut_4();
             boxGoIn_5();
         }
-
     };
     function boxGoOut_1() {
-        $(".b1_01").stop().animate({top: -50, opacity: 0}, 1200);
-        $(".b1_02").stop().animate({left: -300, opacity: 0}, 1200);
-        $(".b1_03").stop().animate({right: -300, opacity: 0}, 1200);
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+        clearTimeout(timer4);
+        clearTimeout(timer5);
+        $(".b1_01").stop().animate({top: -50, opacity: 0}, 100);
+        $(".b1_02").stop().animate({top: -50, opacity: 0}, 100);
+        $(".b1_03").stop().animate({left: 1200, opacity: 0}, 100);
+        $(".b1_04").stop().animate({left: 1600,opacity:0}, 100);
+        $(".b1_05").stop().animate({right: -800,opacity:0}, 100);
+        $(".b1_06").stop().animate({opacity:0}, 100);
     }
     function boxGoOut_2() {
         $(".b2_01").stop().animate({left: -110, opacity: 0}, 1200);
@@ -101,9 +115,27 @@ $(function () {
         $(".b5_02").stop().animate({right: -110, opacity: 0}, 1200);
     }
     function boxGoIn_1() {
-        $(".b1_01").stop().animate({top: 224, opacity: 1}, 1200);
-        $(".b1_02").stop().animate({left: 0, opacity: 1}, 1200);
-        $(".b1_03").stop().animate({right: 0, opacity: 1}, 1200);
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+        clearTimeout(timer4);
+        clearTimeout(timer5);
+        $(".b1_02").stop().animate({top: 324, opacity: 1}, 500);
+        timer1 = setTimeout(function () {
+            $(".b1_01").stop().animate({top: 224, opacity: 1}, 500);
+        },500)
+        timer2 = setTimeout(function () {
+            $(".b1_03").stop().animate({left: 0, opacity: 1}, 500);
+        },1000)
+        timer3 = setTimeout(function () {
+            $(".b1_04").stop().animate({left: 500, opacity: 1}, 500);
+        },1500)
+        timer4 = setTimeout(function () {
+            $(".b1_05").stop().animate({right: 0, opacity: 1}, 500);
+        },2000)
+        timer5 = setTimeout(function () {
+            $(".b1_06").stop().animate({opacity: 1}, 500);
+        },2500)
     }
     function boxGoIn_2() {
         $(".b2_01").stop().animate({left: 146, opacity: 1}, 1200);
