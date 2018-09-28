@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body {
+    width: 100%;
     font-size: 14px;
     font-family:微软雅黑,黑体,宋体,sans-serif !important;
     background: rgb(255, 255, 255);
@@ -76,10 +77,20 @@ i,strong,b{
 /* /rightbar */
 .fl {float: left;}
 .fr{float: right;}
+@media screen and (max-width: 1024px) {
+    html {
+        width: 1500px;
+    }
+}
+@media screen and (max-device-width: 320px) {
+    html {
+        width: 1280px;
+    }
+}
+
 
 /*****header***/
 .lj_header {
-    width: 100%;
     height: 76px;
     line-height: 76px;
     position: fixed;

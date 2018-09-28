@@ -28,6 +28,14 @@ $(function () {
             }
         }
         boxGoIn_1();
+        var screenW = window.screen.width;
+        if(screenW<=1024) {
+            boxGoIn_1();
+            boxGoIn_2();
+            boxGoIn_3();
+            boxGoIn_4();
+            boxGoIn_5();
+        }
         setTimeout(function getcurrentIndex() {
             $("#loutinav").find('li').each(function(i,o){
                 if($(o).hasClass("on")){
@@ -63,25 +71,45 @@ $(function () {
             return p_num
         }
         var currentPagenum = getPageNum();
-        if(currentPagenum == 0){
-            boxGoOut_2();
-            boxGoIn_1();
-        }else if(currentPagenum == 1){
-            boxGoOut_1();
-            boxGoOut_3();
-            boxGoIn_2();
-        }else if(currentPagenum == 2){
-            boxGoOut_2();
-            boxGoOut_4();
-            boxGoIn_3();
-        }else if(currentPagenum == 3){
-            boxGoOut_3();
-            boxGoOut_5();
-            boxGoIn_4();
-        }else if(currentPagenum == 4){
-            boxGoOut_4();
-            boxGoIn_5();
+        var screenW = window.screen.width;
+        if(screenW<=1024){
+            if(currentPagenum == 0){
+                boxGoIn_1();
+                boxGoIn_2();
+                boxGoIn_3();
+                boxGoIn_4();
+                boxGoIn_5();
+            }else if(currentPagenum == 1){
+
+            }else if(currentPagenum == 2){
+                boxGoIn_3();
+            }else if(currentPagenum == 3){
+                boxGoIn_4();
+            }else if(currentPagenum == 4){
+                boxGoIn_5();
+            }
+        }else{
+            if(currentPagenum == 0){
+                boxGoOut_2();
+                boxGoIn_1();
+            }else if(currentPagenum == 1){
+                boxGoOut_1();
+                boxGoOut_3();
+                boxGoIn_2();
+            }else if(currentPagenum == 2){
+                boxGoOut_2();
+                boxGoOut_4();
+                boxGoIn_3();
+            }else if(currentPagenum == 3){
+                boxGoOut_3();
+                boxGoOut_5();
+                boxGoIn_4();
+            }else if(currentPagenum == 4){
+                boxGoOut_4();
+                boxGoIn_5();
+            }
         }
+
     };
     function boxGoOut_1() {
         clearTimeout(timer1);
