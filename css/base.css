@@ -304,8 +304,8 @@ i,strong,b{
     height: 190px;
 }
 .fixed_r li {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     border:2px solid #ccc;
     background-color: transparent;
