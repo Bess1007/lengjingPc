@@ -3,11 +3,11 @@ $(function () {
     fn_load();
     function fn_load() {
         var elementInit = {
-            ".b1_01": {top: -50,opacity:0},
-            ".b1_02": {top: -50, opacity: 0},
-            ".b1_03": {left: 1200, opacity: 0},
-            ".b1_04": {left: 1600, opacity: 0},
-            ".b1_05": {right: -800, opacity: 0},
+            ".b1_01": {top: 0,opacity:0},
+            ".b1_02": {top: 0, opacity: 0},
+            ".b1_03": {left: 400, opacity: 0},
+            ".b1_04": {left: 1200, opacity: 0},
+            ".b1_05": {right: -600, opacity: 0},
             ".b1_06": {opacity: 0},
             ".b2_01": {left: -110, opacity: 0},
             ".b2_02": {right: -110, opacity: 0},
@@ -72,7 +72,7 @@ $(function () {
         }
         var currentPagenum = getPageNum();
         var screenW = window.screen.width;
-        if(screenW<=1024){
+        if(screenW<=1024){ //移动设备时
             if(currentPagenum == 0){
                 boxGoIn_1();
                 boxGoIn_2();
@@ -148,22 +148,22 @@ $(function () {
         clearTimeout(timer3);
         clearTimeout(timer4);
         clearTimeout(timer5);
-        $(".b1_02").stop().animate({top: 324, opacity: 1}, 500);
+        $(".b1_02").stop().animate({top: 324, opacity: 1}, 400);
         timer1 = setTimeout(function () {
-            $(".b1_01").stop().animate({top: 224, opacity: 1}, 500);
-        },500)
+            $(".b1_01").stop().animate({top: 224, opacity: 1}, 400);
+        },100)
         timer2 = setTimeout(function () {
-            $(".b1_03").stop().animate({left: 0, opacity: 1}, 500);
-        },1000)
+            $(".b1_03").stop().animate({left: 0, opacity: 1}, 800);
+        },200)
         timer3 = setTimeout(function () {
-            $(".b1_04").stop().animate({left: 500, opacity: 1}, 500);
-        },1500)
+            $(".b1_04").stop().animate({left: 500, opacity: 1}, 800);
+        },300)
         timer4 = setTimeout(function () {
-            $(".b1_05").stop().animate({right: 0, opacity: 1}, 500);
-        },2000)
+            $(".b1_05").stop().animate({right: 0, opacity: 1}, 800);
+        },400)
         timer5 = setTimeout(function () {
-            $(".b1_06").stop().animate({opacity: 1}, 500);
-        },2500)
+            $(".b1_06").stop().animate({opacity: 1}, 400);
+        },1000)
     }
     function boxGoIn_2() {
         $(".b2_01").stop().animate({left: 146, opacity: 1}, 1200);
